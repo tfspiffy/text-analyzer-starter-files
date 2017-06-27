@@ -34,9 +34,13 @@ function avgWordLength(array){
 
 function displayValues(count, unique, length){
     $('.container').find('dl').removeClass('hidden');
-    console.log("count : " + count);
-    console.log("unique : " + unique);
-    console.log("length : " + length);
+    var dd1 = $('dd').first()
+    dd1.text(count)
+    var dt2 = dd1.next()
+    var dd2 = dt2.next()
+    dd2.text(unique)
+    var dd3 = $('dd').last()
+    dd3.text(length)
 }
 
 function main(text) {
@@ -54,7 +58,6 @@ function getText(){
         
         text = $('#user-text').val();
         main(text);        
-
     });
 }
 
